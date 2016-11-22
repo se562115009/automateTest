@@ -1,6 +1,12 @@
+import lombok.Builder;
+import lombok.Data;
+
 /**
  * Created by mac on 11/12/2016 AD.
  */
+
+@Data
+@Builder
 public class Student {
 
     String name;
@@ -12,20 +18,5 @@ public class Student {
         this.gpa = gpa;
     }
 
-    // getter and setter
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getGpa() {
-        return gpa;
-    }
-
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
-    }
 }

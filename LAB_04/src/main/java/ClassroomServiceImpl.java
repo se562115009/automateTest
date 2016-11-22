@@ -14,8 +14,10 @@ public class ClassroomServiceImpl implements ClassroomService{
     public void setClassroomDao(ClassroomDao classroomDao)
     {this.classroomDao = classroomDao;}
 
+
+    // 22/11/2016 edit return getTotalGPA(classroomDao.getStudents());
     public double getTotalGPA(){
-        return 0;
+        return getTotalGPA(classroomDao.getStudents());
     }
 
     public double getTotalGPA(List<Student> student) {

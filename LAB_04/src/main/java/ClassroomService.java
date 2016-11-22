@@ -5,7 +5,8 @@ import java.util.List;
  */
 public interface ClassroomService {
 
-    // call method in ServiceImpl
+    // call method in ClassroomServiceImpl
     double getTotalGPA();
     double getTotalGPA(List<Student> student);
+
 }

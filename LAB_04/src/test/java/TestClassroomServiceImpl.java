@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
  * Created by mac on 11/12/2016 AD.
  */
 public class TestClassroomServiceImpl {
-
+    // test by stub
     @Test
     // test cal total GPA from Pai data
     public void testGetTotalGPAPai() {
@@ -133,7 +133,7 @@ public class TestClassroomServiceImpl {
     // end test cal total GPA from Toey data
 
 
-    // 22 Nov 2016
+    // 22 Nov 2016 test by mock object
     @Test
     public void testGetTotalGPAAll(){
         // create mock object, this casre is classrommDao object
@@ -162,6 +162,9 @@ public class TestClassroomServiceImpl {
         assertThat(classroomService.getTotalGPA(),is(closeTo(3.74,0.001)));
         // to verfy that method called or not
         // verify the classroomDao at first time
+        // time(specific number of time that need to verify)
+        // any() --> used for check any time not specific, must be called
+        // atleast() --> to check at least time has been called
         verify(classroomDao,times(1)).getStudents();
 
 

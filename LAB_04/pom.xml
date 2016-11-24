@@ -8,12 +8,13 @@
     <artifactId>lab04</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <dependencies>
+    <>
         <dependency>
             <groupId>pl.pragmatists</groupId>
             <artifactId>JUnitParams</artifactId>
             <version>1.0.5</version>
-            <scope>test</scope> //when deploy, use in test only
+            <scope>test</scope>
+            <!--when deploy, use in test only-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -43,6 +44,9 @@
             <artifactId>lombok</artifactId>
             <version>1.16.10</version>
         </dependency>
+
+
+
 
     </dependencies>
 

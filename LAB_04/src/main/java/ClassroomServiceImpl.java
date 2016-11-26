@@ -111,12 +111,39 @@ public class ClassroomServiceImpl implements  ClassroomService{
     // submit Friday
     // 2. hw
     public List<Student> getTotalGPALowerThan (double gpa) {
-         return null;
+
+        List<Student> students = classroomDao.getStudents();
+        List<Student> lower = new ArrayList<Student>();
+
+        for (int i=0; i < students.size(); i++){
+            if (students.get(i).getGpa() < gpa){
+                lower.add(students.get(i));
+            }
+        }
+
+        if (lower.size() == 0)
+        { return null; }
+
+        else
+        return lower;
      }
 
      // 3. hw
     public List<Student> getTotalGPAInBetween (double startGpa, double stopGpa){
-        return null;
+
+        List<Student> students = classroomDao.getStudents();
+        List<Student> between = new ArrayList<Student>();
+
+        for (int i=0; i < students.size(); i++){
+            if (startGpa < students.get(i).getGpa() && students.get(i).getGpa() < stopGpa){
+                between.add(students.get(i));
+            }
+        }
+        if (between.size() == 0)
+        { return null; }
+
+        else
+            return between;
     }
 
 }

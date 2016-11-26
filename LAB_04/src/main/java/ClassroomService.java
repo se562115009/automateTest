@@ -9,9 +9,10 @@ public interface ClassroomService {
 
     double getTotalGPA();
     double getTotalGPA(List<Student> student);
-
     Student getStudent(String studentId);
     List<Student> getStudentByName(String name);
-
     double getAverageGPA ();
+
+    List<Student> getTotalGPALowerThan (double gpa);
+    List<Student> getTotalGPAInBetween (double startGpa, double stopGpa);
 }
